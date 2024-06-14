@@ -87,11 +87,11 @@ const HelpIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.HelpIntent';
     },
     handle(handlerInput) {
-        const speakOutput = 'You can say hello to me! How can I help?';
+      const speakOutput = 'Puedes pedirme que realice operaciones matemáticas como sumar, restar, multiplicar o dividir. ¿Qué operación te gustaría realizar?';
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
-            .reprompt(speakOutput)
+            .reprompt('¿Qué operación te gustaría realizar?')
             .getResponse();
     }
 };
